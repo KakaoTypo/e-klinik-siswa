@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - E-Klinik Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container auth-wrapper">
+        <header style="justify-content: center;">
+            <div class="brand-title" style="text-align: center;">
+                <h1>E-Klinik Siswa</h1>
+                <p>New Account Registration</p>
+            </div>
+        </header>
+        <div class="content">
+            <form onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullname" required placeholder="e.g. Dr. Sarah / Alex Johnson">
+                </div>
+                <div class="form-group">
+                    <label>ID Number</label>
+                    <input type="text" id="userid" required placeholder="e.g. 2023881204 / DR-501">
+                </div>
+                <div class="form-group">
+                    <label>Account Role</label>
+                    <select id="reg-role">
+                        <option value="student">Student Patient</option>
+                        <option value="mo">Medical Officer / Clinic Admin</option>
+                        <option value="doctor">Senior Doctor (Dr.)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" required placeholder="Create password">
+                </div>
+                <button type="submit" style="width: 100%; margin-top: 10px;">Register Account</button>
+            </form>
+            <p style="text-align: center; margin-top: 15px; font-size: 0.85rem;">
+                Already registered? <a href="login.html" style="color: var(--accent);">Sign In</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function handleRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('fullname').value;
+            const role = document.getElementById('reg-role').value;
+            alert(`Registration complete for ${name} (${role.toUpperCase()})! Please sign in.`);
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

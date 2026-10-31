@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Senior Dr. - Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Senior Doctor & Specialist Station</p></div>
+            <div class="role-tag">Role: Senior Doctor</div>
+        </header>
+        <nav>
+            <a href="doctor-overview.html" class="active">Overview</a>
+            <a href="doctor-appointments.html">Specialist Consults</a>
+            <a href="doctor-history.html">Complex History</a>
+            <a href="doctor-mc.html">Extended Medical Leave</a>
+            <a href="doctor-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <h2>Specialist & Clinical Review Dashboard</h2>
+            <div class="grid" style="margin-top:15px;">
+                <div class="card"><h3>Referred Cases</h3><p style="font-size:1.5rem; font-weight:bold;">3 Patients</p></div>
+                <div class="card"><h3>Extended MC Reviews</h3><p style="font-size:1.5rem; font-weight:bold; color:var(--warning);">1 Pending</p></div>
+                <div class="card"><h3>Specialist Prescriptions</h3><p style="font-size:1.5rem; font-weight:bold;">12 Active</p></div>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('doctor');</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Senior Dr. - Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Senior Doctor & Specialist Station</p></div>
+            <div class="role-tag">Role: Senior Doctor</div>
+        </header>
+        <nav>
+            <a href="doctor-overview.html">Overview</a>
+            <a href="doctor-appointments.html">Specialist Consults</a>
+            <a href="doctor-history.html">Complex History</a>
+            <a href="doctor-mc.html">Extended Medical Leave</a>
+            <a href="doctor-archive.html" class="active">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <h3>Read-Only Specialist Archive</h3>
+                <p style="font-size:0.85rem; color:var(--text-muted);">View chronic history files of past graduated students.</p>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('doctor');</script>
+</body>
+</html>

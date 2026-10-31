@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Senior Dr. - Consultations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Senior Doctor & Specialist Station</p></div>
+            <div class="role-tag">Role: Senior Doctor</div>
+        </header>
+        <nav>
+            <a href="doctor-overview.html">Overview</a>
+            <a href="doctor-appointments.html" class="active">Specialist Consults</a>
+            <a href="doctor-history.html">Complex History</a>
+            <a href="doctor-mc.html">Extended Medical Leave</a>
+            <a href="doctor-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <h3>Specialist Referral Queue (Escalated by MOs)</h3>
+                <table>
+                    <tr><th>Ref Code</th><th>Student ID</th><th>Referred By</th><th>Reason / MO Diagnosis</th><th>Action</th></tr>
+                    <tr><td>#REF-90</td><td>2023112233</td><td>MO / Admin</td><td>Chronic Migraine Review & Extended MC</td><td><button onclick="alert('Opening specialist consultation portal...')">Review Case</button></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('doctor');</script>
+</body>
+</html>

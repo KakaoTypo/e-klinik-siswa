@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>MO & Admin - Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Medical Officer & Clinic Admin Station</p></div>
+            <div class="role-tag">Role: MO / Admin</div>
+        </header>
+        <nav>
+            <a href="mo-overview.html" class="active">Overview</a>
+            <a href="mo-appointments.html">Appointments Queue</a>
+            <a href="mo-history.html">Diagnoses & Doctor Referrals</a>
+            <a href="mo-mc.html">Medical Leave</a>
+            <a href="admin-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <h2>MO & Administration Dashboard</h2>
+            <div class="grid" style="margin-top:15px;">
+                <div class="card"><h3>Walk-in Queue</h3><p style="font-size:1.5rem; font-weight:bold;">8 Patients</p></div>
+                <div class="card"><h3>Pending Diagnoses</h3><p style="font-size:1.5rem; font-weight:bold; color:var(--danger);">2</p></div>
+                <div class="card"><h3>Total Clinic Visits</h3><p style="font-size:1.5rem; font-weight:bold;">1,240</p></div>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('mo');</script>
+</body>
+</html>

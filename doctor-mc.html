@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Senior Dr. - Extended MC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Senior Doctor & Specialist Station</p></div>
+            <div class="role-tag">Role: Senior Doctor</div>
+        </header>
+        <nav>
+            <a href="doctor-overview.html">Overview</a>
+            <a href="doctor-appointments.html">Specialist Consults</a>
+            <a href="doctor-history.html">Complex History</a>
+            <a href="doctor-mc.html" class="active">Extended Medical Leave</a>
+            <a href="doctor-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <h3>Approve Long-Term / Extended Medical Certificates (>3 Days)</h3>
+                <table>
+                    <tr><th>Request ID</th><th>Student</th><th>Requested Days</th><th>MO Reason</th><th>Action</th></tr>
+                    <tr><td>#MCR-12</td><td>2023112233</td><td>7 Days</td><td>Post-Surgical Recovery</td><td><button onclick="alert('Extended MC Approved by Senior Doctor!')">Approve Extended MC</button></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('doctor');</script>
+</body>
+</html>

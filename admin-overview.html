@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Admin - Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Clinic Administration</p></div>
+            <div class="role-tag">Role: Admin</div>
+        </header>
+        <nav>
+            <a href="admin-overview.html" class="active">Overview</a>
+            <a href="admin-appointments.html">Appointments</a>
+            <a href="admin-history.html">Patient History</a>
+            <a href="admin-mc.html">Medical Leave</a>
+            <a href="admin-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="grid">
+                <div class="card"><h3>Total Visits</h3><p style="font-size:1.5rem; font-weight:bold;">1,240</p></div>
+                <div class="card"><h3>System Status</h3><p style="font-size:1.5rem; font-weight:bold; color:var(--success);">Operational</p></div>
+                <div class="card"><h3>Archived Profiles</h3><p style="font-size:1.5rem; font-weight:bold;">310</p></div>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('admin');</script>
+</body>
+</html>

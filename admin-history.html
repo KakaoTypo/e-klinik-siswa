@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Admin - History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Clinic Administration</p></div>
+            <div class="role-tag">Role: Admin</div>
+        </header>
+        <nav>
+            <a href="admin-overview.html">Overview</a>
+            <a href="admin-appointments.html">Appointments</a>
+            <a href="admin-history.html" class="active">Patient History</a>
+            <a href="admin-mc.html">Medical Leave</a>
+            <a href="admin-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <h3>Clinic System Audit Logs</h3>
+                <table>
+                    <tr><th>Log ID</th><th>Timestamp</th><th>Action</th><th>User</th></tr>
+                    <tr><td>LOG-901</td><td>2026-10-31 09:30</td><td>Diagnosis Updated</td><td>MO Ahmad</td></tr>
+                    <tr><td>LOG-902</td><td>2026-10-31 10:15</td><td>Specialist Extended MC Approved</td><td>Dr. Sarah</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('admin');</script>
+</body>
+</html>

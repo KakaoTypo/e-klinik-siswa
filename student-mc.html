@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Student - Medical Leave</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Student Portal</p></div>
+            <div class="role-tag">Role: Student</div>
+        </header>
+        <nav>
+            <a href="student-overview.html">Overview</a>
+            <a href="student-appointments.html">Appointments</a>
+            <a href="student-history.html">Patient History</a>
+            <a href="student-mc.html" class="active">Medical Leave</a>
+            <a href="student-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="card" style="text-align: center;">
+                <h2>UNIVERSITI TEKNOLOGI MARA</h2>
+                <p style="font-size:0.85rem; color:var(--text-muted);">Digital Medical Certificate (MC)</p>
+                <hr style="margin: 15px 0; border:0; border-top: 1px solid var(--border-color);">
+                <p>Issued to: <strong>Alex Johnson (2023881204)</strong></p>
+                <p>Status: <span style="color:var(--success); font-weight:bold;">1 Day Leave Granted</span></p>
+                <button onclick="window.print()" style="margin-top: 15px;">Print / Download MC</button>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('student');</script>
+</body>
+</html>

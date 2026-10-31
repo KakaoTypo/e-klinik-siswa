@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>MO - Archive View</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Medical Officer (MO) Station</p></div>
+            <div class="role-tag">Role: Medical Officer</div>
+        </header>
+        <nav>
+            <a href="mo-overview.html">Overview</a>
+            <a href="mo-appointments.html">Appointments Queue</a>
+            <a href="mo-history.html">Patient History</a>
+            <a href="mo-mc.html">Medical Leave</a>
+            <a href="mo-archive.html" class="active">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <h3>Read-Only Archived Patient Profiles[cite: 4]</h3>
+                <table>
+                    <tr><th>Student ID</th><th>Name</th><th>Grad Year</th><th>Action</th></tr>
+                    <tr><td>2019441122</td><td>Farah Ann</td><td>2023</td><td><button onclick="alert('Viewing archived notes...')">View Notes</button></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('mo');</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Admin Portal - E-Klinik Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title">
+                <h1>E-Klinik Siswa</h1>
+                <p>Clinic Administration & Graduation Archival</p>
+            </div>
+            <div class="user-badge">Role: Admin</div>
+        </header>
+
+        <nav>
+            <a href="admin.html" class="active">Archive & Records</a>
+            <a href="login.html">Logout</a>
+        </nav>
+
+        <div class="content">
+            <div class="card">
+                <h3>Graduation Medical Record Archiving (CRUD: Delete/Archive)</h3>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Archive or remove medical history records for graduated students[cite: 4, 5].</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Graduation Year</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="archive-table">
+                        <tr>
+                            <td>2020123456</td>
+                            <td>Sarah Ahmad</td>
+                            <td>2024</td>
+                            <td>
+                                <button onclick="archiveRecord(this)">Archive</button>
+                                <button class="btn-danger" onclick="deleteRecord(this)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2020987654</td>
+                            <td>Michael Tan</td>
+                            <td>2024</td>
+                            <td>
+                                <button onclick="archiveRecord(this)">Archive</button>
+                                <button class="btn-danger" onclick="deleteRecord(this)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function archiveRecord(btn) {
+            const row = btn.closest('tr');
+            row.style.opacity = '0.4';
+            btn.disabled = true;
+            btn.textContent = 'Archived';
+            alert('Student record moved to Graduation Archive.');
+        }
+
+        function deleteRecord(btn) {
+            if (confirm('Are you sure you want to purge this record from the database?')) {
+                const row = btn.closest('tr');
+                row.remove();
+            }
+        }
+    </script>
+</body>
+</html>

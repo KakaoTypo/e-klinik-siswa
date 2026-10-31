@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Officer Portal - E-Klinik Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title">
+                <h1>E-Klinik Siswa</h1>
+                <p>Medical Officer Consultation & MC Station</p>
+            </div>
+            <div class="user-badge">Role: Doctor</div>
+        </header>
+
+        <nav>
+            <a href="doctor.html" class="active">Patient Consultations</a>
+            <a href="login.html">Logout</a>
+        </nav>
+
+        <div class="content">
+            <div class="card">
+                <h3>Patient Diagnosis & MC Issuer (CRUD: Read & Update)</h3>
+                <form onsubmit="saveDiagnosis(event)">
+                    <div class="form-group">
+                        <label>Select Student Patient</label>
+                        <select id="student-select">
+                            <option>2023881204 - Alex Johnson (APT-101)</option>
+                            <option>2023994112 - Siti Nurhaliza (APT-102)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Clinical Diagnosis</label>
+                        <input type="text" id="diagnosis" placeholder="e.g. Acute Upper Respiratory Tract Infection" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Issue Medical Certificate (MC Days)</label>
+                        <input type="number" id="mc-days" min="0" max="7" value="1">
+                    </div>
+                    <button type="submit">Update Record & Issue MC</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>Recent Diagnoses Log</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Diagnosis</th>
+                            <th>MC Granted</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="diagnosis-log">
+                        <tr>
+                            <td>2023112233</td>
+                            <td>Migraine</td>
+                            <td>1 Day</td>
+                            <td>Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function saveDiagnosis(e) {
+            e.preventDefault();
+            const student = document.getElementById('student-select').value.split(' - ')[0];
+            const diagnosis = document.getElementById('diagnosis').value;
+            const mcDays = document.getElementById('mc-days').value;
+
+            const log = document.getElementById('diagnosis-log');
+            log.innerHTML += `
+                <tr>
+                    <td>${student}</td>
+                    <td>${diagnosis}</td>
+                    <td>${mcDays} Day(s)</td>
+                    <td><span style="color: var(--success);">Completed</span></td>
+                </tr>
+            `;
+
+            document.getElementById('diagnosis').value = '';
+            alert('Diagnosis updated and MC recorded!');
+        }
+    </script>
+</body>
+</html>

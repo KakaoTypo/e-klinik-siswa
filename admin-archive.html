@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>MO & Admin - Graduation Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Medical Officer & Clinic Admin Station</p></div>
+            <div class="role-tag">Role: MO / Admin</div>
+        </header>
+        <nav>
+            <a href="mo-overview.html">Overview</a>
+            <a href="mo-appointments.html">Appointments Queue</a>
+            <a href="mo-history.html">Diagnoses & Doctor Referrals</a>
+            <a href="mo-mc.html">Medical Leave</a>
+            <a href="admin-archive.html" class="active">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <h3>Graduation Record Archiving & Deletion (CRUD: Delete/Archive)</h3>
+                <table>
+                    <tr><th>Student ID</th><th>Name</th><th>Grad Year</th><th>Actions</th></tr>
+                    <tr>
+                        <td>2020123456</td>
+                        <td>Sarah Ahmad</td>
+                        <td>2024</td>
+                        <td>
+                            <button onclick="alert('Record archived')">Archive</button>
+                            <button class="danger" onclick="confirm('Purge record?') && this.closest('tr').remove()">Delete</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('admin');</script>
+</body>
+</html>

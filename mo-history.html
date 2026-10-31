@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>MO & Admin - Diagnoses & Doctor Referrals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Medical Officer & Clinic Admin Station</p></div>
+            <div class="role-tag">Role: MO / Admin</div>
+        </header>
+        <nav>
+            <a href="mo-overview.html">Overview</a>
+            <a href="mo-appointments.html">Appointments Queue</a>
+            <a href="mo-history.html" class="active">Diagnoses & Doctor Referrals</a>
+            <a href="mo-mc.html">Medical Leave</a>
+            <a href="admin-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <!-- Standard MO Clinical Diagnosis -->
+            <div class="card">
+                <h3>Record Clinical Diagnosis (CRUD: Update)</h3>
+                <form onsubmit="saveDiag(event)">
+                    <div class="form-group">
+                        <label>Student ID</label>
+                        <input type="text" id="diag-sid" required placeholder="e.g. 2023881204">
+                    </div>
+                    <div class="form-group">
+                        <label>Clinical Diagnosis & Notes</label>
+                        <input type="text" id="diag-notes" required placeholder="e.g. Upper Respiratory Tract Infection">
+                    </div>
+                    <button type="submit">Save Diagnosis Record</button>
+                </form>
+            </div>
+
+            <!-- Write Diagnosis / Referral to Senior Doctor -->
+            <div class="card" style="border-left: 4px solid var(--warning);">
+                <h3>Write Diagnosis & Refer Patient to Senior Doctor (Specialist Escalation)</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Escalate complex patient cases or long-term medical reviews directly to a Senior Doctor.</p>
+                <form onsubmit="referToDoctor(event)">
+                    <div class="form-group">
+                        <label>Student ID</label>
+                        <input type="text" id="ref-sid" required placeholder="e.g. 2023112233">
+                    </div>
+                    <div class="form-group">
+                        <label>Preliminary Diagnosis / Reason for Escalation</label>
+                        <textarea id="ref-reason" rows="3" required placeholder="e.g. Patient presents with chronic severe migraine. Requires specialist review and approval for extended MC."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Assign to Senior Doctor</label>
+                        <select id="ref-doctor">
+                            <option value="Dr. Sarah Lin (Neurology Specialist)">Dr. Sarah Lin (Neurology Specialist)</option>
+                            <option value="Dr. Tan Wei (Internal Medicine)">Dr. Tan Wei (Internal Medicine)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="warning">Dispatch Referral to Senior Doctor</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>
+        checkAccess('mo');
+
+        function saveDiag(e) {
+            e.preventDefault();
+            const sid = document.getElementById('diag-sid').value;
+            alert(`Diagnosis for Student ID ${sid} successfully updated in system!`);
+        }
+
+        function referToDoctor(e) {
+            e.preventDefault();
+            const sid = document.getElementById('ref-sid').value;
+            const doc = document.getElementById('ref-doctor').value;
+            alert(`Diagnosis and referral notes for Student ID ${sid} successfully dispatched to ${doc}!`);
+        }
+    </script>
+</body>
+</html>

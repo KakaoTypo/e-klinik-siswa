@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Senior Dr. - Complex Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Senior Doctor & Specialist Station</p></div>
+            <div class="role-tag">Role: Senior Doctor</div>
+        </header>
+        <nav>
+            <a href="doctor-overview.html">Overview</a>
+            <a href="doctor-appointments.html">Specialist Consults</a>
+            <a href="doctor-history.html" class="active">Complex History</a>
+            <a href="doctor-mc.html">Extended Medical Leave</a>
+            <a href="doctor-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <h3>Advanced Medical History & Specialist Prescriptions</h3>
+                <form onsubmit="alert('Specialist Diagnosis Approved!'); return false;">
+                    <div class="form-group"><label>Student ID</label><input type="text" required placeholder="2023112233"></div>
+                    <div class="form-group"><label>Specialist Diagnosis & Restricted Prescription</label><input type="text" required placeholder="e.g. Migraine Management Plan & Propranolol"></div>
+                    <button type="submit">Approve Specialist Plan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('doctor');</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Student - History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-title"><h1>E-Klinik Siswa</h1><p>Student Portal</p></div>
+            <div class="role-tag">Role: Student</div>
+        </header>
+        <nav>
+            <a href="student-overview.html">Overview</a>
+            <a href="student-appointments.html">Appointments</a>
+            <a href="student-history.html" class="active">Patient History</a>
+            <a href="student-mc.html">Medical Leave</a>
+            <a href="student-archive.html">Graduation Archive</a>
+            <a href="#" onclick="logout()" style="color: var(--danger); margin-left: auto;">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <h3>My Consultation History</h3>
+                <table>
+                    <tr><th>Date</th><th>Attending Clinician</th><th>Diagnosis</th><th>Prescription</th></tr>
+                    <tr><td>2026-10-15</td><td>MO Ahmad</td><td>Viral Infection</td><td>Paracetamol</td></tr>
+                    <tr><td>2026-05-10</td><td>Dr. Sarah (Specialist)</td><td>Asthma Review</td><td>Salbutamol Inhaler</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>checkAccess('student');</script>
+</body>
+</html>
