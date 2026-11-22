@@ -31,7 +31,7 @@ The system supports role-based access for **Students**, **Medical Officers (MO)*
 
 ### 4. Repository Contents (Storyboard & ERD)
 
-* **`login.html` & `auth.js`** — Portal login interface supporting role selection (`Student`, `Medical Officer`, `Clinic Admin`).
+* **`login.html/index.html` & `auth.js`** — Portal login interface supporting role selection (`Student`, `Medical Officer`, `Clinic Admin`).
 * **`student-overview.html`** — Main student portal & dashboard overview.
 * **`mo-overview.html` / `doctor-overview.html`** — Medical Officer views for appointment handling, patient medical history, diagnosis updates, and MC issuance.
 * **`admin-overview.html`** — Clinic Admin views for system overview, inventory alerts, and graduation record archiving.
