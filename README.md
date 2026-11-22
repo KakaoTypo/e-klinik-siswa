@@ -73,7 +73,7 @@ Users begin at the **Login Page** using their Student/Staff ID and select their 
 ---
 
 ### Phase 3: Medical Officer (MO) Portal Flow
-**Flow:** `Overview` ➔ `Appointments & Queue` ➔ `Patient History` ➔ `Medical Leave Issuance`
+**Flow:** `Overview` ➔ `Appointments Queue` ➔ `Diagnoses & Doctor Referrals` ➔ `Medical Leave`➔ `Graduation Archieve`
 
 | 1. MO Dashboard Overview | 2. Manage Appointments & Queue |
 | :---: | :---: |
@@ -86,9 +86,9 @@ Users begin at the **Login Page** using their Student/Staff ID and select their 
 ---
 
 ### Phase 4: Senior Doctor & Clinic Admin Flow
-**Flow:** `Overview` ➔ `Appointments` ➔ `Patient History` ➔ `Medical Leave Review` ➔ `Graduation Archive`
+**Flow:** `Doctor Overview` ➔ `Specialist Consults` ➔ `Complex History` ➔ `Extended Medical Leave` ➔ `Graduation Archive`
 
-| 1. Doctor Overview | 2. Specialist Appointments | 3. Patient History Review |
+| 1. Doctor Overview | 2. Specialist Consults | 3. Patient History Review |
 | :---: | :---: | :---: |
 | ![Doctor Overview](SCREENSHOT%20OUTPUT/doctor-overview.JPG) | ![Doctor Appointments](SCREENSHOT%20OUTPUT/doctor-appointments.JPG) | ![Doctor History](SCREENSHOT%20OUTPUT/doctor-history.JPG) |
 
