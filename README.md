@@ -51,11 +51,11 @@ Users begin at the **Login Page** using their Student/Staff ID and select their 
 
 | Step 1: Login Page | Step 2: Role Selection (Login) |
 | :---: | :---: |
-| ![Login Page](SCREENSHOT%20OUTPUT/login.JPG) | ![Login Select Role](SCREENSHOT%20OUTPUT/login_select_role.JPG) |
+| ![Login Page](SCREENSHOT%20OUTPUT/login.JPG) | ![Login Select Role](SCREENSHOT%20OUTPUT/login_select_role.jpg) |
 
 | Step 3: Registration Page | Step 4: Role Selection (Register) |
 | :---: | :---: |
-| ![Register Page](SCREENSHOT%20OUTPUT/register.JPG) | ![Register Select Role](SCREENSHOT%20OUTPUT/register_select_role.JPG) |
+| ![Register Page](SCREENSHOT%20OUTPUT/register.JPG) | ![Register Select Role](SCREENSHOT%20OUTPUT/register_select_role.jpg) |
 
 ---
 
