@@ -14,10 +14,10 @@ The system supports role-based access for **Students**, **Medical Officers (MO)*
 ### 1. Role-Based CRUD Operations
 - **Student:**
   - **Create:** Book appointments and check walk-in queue waiting times.
-- **Medical Officer (MO) & Senior Doctor:**
+- **Doctor:**
   - **Read:** View patient medical histories prior to consultation.
   - **Update:** Update patient diagnoses, handle specialist referrals, and issue Medical Certificates (MC).
-- **Clinic Admin:**
+- **MO/Nurse/Admin:**
   - **Delete / Archive:** Delete or archive graduated student records from active clinic records.
 
 ### 2. Business Logic (Walk-In Queue Estimation)
@@ -67,7 +67,7 @@ Users begin at the **Login Page** using their Student/Staff ID and select their 
 
 ---
 
-### Phase 3: Medical Officer (MO) & Clinic Admin Station Flow
+### Phase 3: Medical Officer (MO) / Clinic Admin / Nurse Station Flow
 **Flow:** `Overview` ➔ `Appointments Queue` ➔ `Diagnoses & Doctor Referrals` ➔ `Medical Leave` ➔ `Graduation Archive`
 
 | 1. MO Dashboard Overview | 2. Manage Appointments & Queue |
@@ -80,7 +80,7 @@ Users begin at the **Login Page** using their Student/Staff ID and select their 
 
 ---
 
-### Phase 4: Senior Doctor & Specialist Station Flow
+### Phase 4: Doctor Station Flow
 **Flow:** `Doctor Overview` ➔ `Specialist Consults` ➔ `Complex History` ➔ `Extended Medical Leave` ➔ `Graduation Archive`
 
 | 1. Doctor Overview | 2. Specialist Consults | 3. Patient History Review |
