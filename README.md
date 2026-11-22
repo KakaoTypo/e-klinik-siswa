@@ -81,7 +81,7 @@ Users begin at the **Login Page** using their Student/Staff ID and select their 
 
 | 3. Update Consultation & History | 4. Issue & Manage Medical Leave |
 | :---: | :---: |
-| ![MO History](SCREENSHOT%20OUTPUT/mo-history.JPG) | ![MO MC](SCREENSHOT%20OUTPUT/mo-mc.JPG) |
+| ![MO History](SCREENSHOT%20OUTPUT/mo-history.JPG) | ![MO MC](SCREENSHOT%20OUTPUT/mo-mc.JPG) | ![Admin Archive](SCREENSHOT%20OUTPUT/admin-archive.JPG) |
 
 ---
 
@@ -94,8 +94,7 @@ Users begin at the **Login Page** using their Student/Staff ID and select their 
 
 | 4. Medical Leave Verification | 5. Doctor Archive View | 6. Clinic Admin Archive Management |
 | :---: | :---: | :---: |
-| ![Doctor MC](SCREENSHOT%20OUTPUT/doctor-mc.JPG) | ![Doctor Archive](SCREENSHOT%20OUTPUT/doctor-archive.JPG) | ![Admin Archive](SCREENSHOT%20OUTPUT/admin-archive.JPG) |
-
+| ![Doctor MC](SCREENSHOT%20OUTPUT/doctor-mc.JPG) | ![Doctor Archive](SCREENSHOT%20OUTPUT/doctor-archive.JPG)
 
 
 
