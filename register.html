@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - E-Klinik Siswa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container auth-wrapper">
-        <header style="justify-content: center;">
-            <div class="brand-title" style="text-align: center;">
+        <header class="auth-header">
+            <div class="logo-box">
+                <img src="clinic_siswa.png" alt="E-Klinik Siswa Logo">
+            </div>
+            <div class="brand-title">
                 <h1>E-Klinik Siswa</h1>
                 <p>New Account Registration</p>
             </div>
@@ -16,15 +20,15 @@
         <div class="content">
             <form onsubmit="handleRegister(event)">
                 <div class="form-group">
-                    <label>Full Name</label>
+                    <label for="fullname">Full Name</label>
                     <input type="text" id="fullname" required placeholder="e.g. Dr. Sarah / Alex Johnson">
                 </div>
                 <div class="form-group">
-                    <label>ID Number</label>
+                    <label for="userid">ID Number</label>
                     <input type="text" id="userid" required placeholder="e.g. 2023881204 / DR-501">
                 </div>
                 <div class="form-group">
-                    <label>Account Role</label>
+                    <label for="reg-role">Account Role</label>
                     <select id="reg-role">
                         <option value="student">Student Patient</option>
                         <option value="mo">Medical Officer / Clinic Admin</option>
@@ -32,13 +36,13 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" required placeholder="Create password">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" required placeholder="Create password">
                 </div>
-                <button type="submit" style="width: 100%; margin-top: 10px;">Register Account</button>
+                <button type="submit" class="btn-full">Register Account</button>
             </form>
-            <p style="text-align: center; margin-top: 15px; font-size: 0.85rem;">
-                Already registered? <a href="login.html" style="color: var(--accent);">Sign In</a>
+            <p class="auth-footer">
+                Already registered? <a href="login.html">Sign In</a>
             </p>
         </div>
     </div>
