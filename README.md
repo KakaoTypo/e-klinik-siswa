@@ -32,7 +32,7 @@ The system supports role-based access for **Students**, **Medical Officers (MO)*
 ### 4. Repository Contents (Storyboard & ERD)
 - **`login.html` / `register.html` & `auth.js`** — Portal authentication interface supporting role selection (`Student`, `Medical Officer / Clinic Admin`, `Senior Doctor`).
 - **`student-overview.html`** — Student portal views for dashboard overview, appointment booking, patient history, medical leave, and graduation archive.
-- **`mo-archieve.html` & `admin-archive.html`** — Medical Officer & Clinic Admin station views for queue management, clinical diagnoses, MC issuance, and graduation record archiving.
+- **`mo-overview.html` & `admin-overview.html`** — Medical Officer & Clinic Admin station views for queue management, clinical diagnoses, MC issuance, and graduation record archiving.
 - **`doctor-overview.html`** — Senior Doctor views for specialist consultations, complex history review, extended MC verification, and archive access.
 - **`style.css`** — Master stylesheet for layout, cards, tables, and responsive branding.
 - **`ERD_CSC584_GROUP 2_ELITE.pdf`** — Entity Relationship Diagram (ERD) detailing the database schema (`STUDENT`, `MEDICAL_OFFICER`, `DOCTOR`, `APPOINTMENT`, `CONSULTATION`, `MEDICINE_CERTIFICATE`, `PRESCRIPTION`, `MEDICINE`).
