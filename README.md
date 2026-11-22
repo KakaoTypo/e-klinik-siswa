@@ -13,7 +13,7 @@ The system supports role-based access for **Students**, **Medical Officers (MO)*
 
 ### 1. Role-Based CRUD Operations
 * **Student:**
-  * **Create:** Book new doctor appointments and check walk-in queue waiting times.
+  * **Create:** Book appointments and check walk-in queue waiting times.
 * **Medical Officer (MO):**
   * **Read:** View patient medical histories prior to consultation.
   * **Update:** Update patient diagnoses and issue Medical Certificates (MC).
