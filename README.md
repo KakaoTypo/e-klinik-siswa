@@ -7,40 +7,35 @@
 ## Project Overview
 **E-Klinik Siswa** is a web-based patient management system designed for the campus health center to streamline medical appointments, queue estimation, patient medical history tracking, diagnosis & medical leave (MC) updates, and student graduation record archiving.
 
-The system supports role-based access for **Students**, **Medical Officers (MO)** and **Clinic Admins**.
+The system supports role-based access for **Students**, **Medical Officers (MO)**, **Senior Doctors**, and **Clinic Admins**.
 
 ## Core System Features & Requirements
 
 ### 1. Role-Based CRUD Operations
-* **Student:**
-  * **Create:** Book appointments and check walk-in queue waiting times.
-* **Medical Officer (MO):**
-  * **Read:** View patient medical histories prior to consultation.
-  * **Update:** Update patient diagnoses and issue Medical Certificates (MC).
-* **Clinic Admin:**
-  * **Delete / Archive:** Delete or archive graduated student records from active clinic records.
+- **Student:**
+  - **Create:** Book appointments and check walk-in queue waiting times.
+- **Medical Officer (MO) & Senior Doctor:**
+  - **Read:** View patient medical histories prior to consultation.
+  - **Update:** Update patient diagnoses, handle specialist referrals, and issue Medical Certificates (MC).
+- **Clinic Admin:**
+  - **Delete / Archive:** Delete or archive graduated student records from active clinic records.
 
 ### 2. Business Logic (Walk-In Queue Estimation)
-* Automatically calculates the estimated waiting time for walk-in students using the formula:
-  - Estimated Waiting Time = Number of "Pending" Patients × Historical Average Consultation Time (e.g., 15 mins)
+- Automatically calculates the estimated waiting time for walk-in students using the formula:
+  - `Estimated Waiting Time = Number of "Pending" Patients × Historical Average Consultation Time (e.g., 15 mins)`
 
 ### 3. Analytics Dashboard
-* **Trends of Common Illnesses:** Visualizes common health trends on campus (e.g., seasonal flu spikes).
-* **Daily Waiting Times:** Displays average daily patient waiting durations.
-* **Inventory Alerts:** Highlights low-stock medications requiring restocking by Clinic Admins.
+- **Trends of Common Illnesses:** Visualizes common health trends on campus (e.g., seasonal flu spikes).
+- **Daily Waiting Times:** Displays average daily patient waiting durations.
+- **Inventory Alerts:** Highlights low-stock medications requiring restocking by Clinic Admins.
 
 ### 4. Repository Contents (Storyboard & ERD)
-
-* **`login.html/index.html` & `auth.js`** — Portal login interface supporting role selection (`Student`, `Medical Officer`, `Clinic Admin`).
-* **`student-overview.html`** — Main student portal & dashboard overview.
-* **`mo-overview.html` / `doctor-overview.html`** — Medical Officer views for appointment handling, patient medical history, diagnosis updates, and MC issuance.
-* **`admin-overview.html`** — Clinic Admin views for system overview, inventory alerts, and graduation record archiving.
-* **`style.css` & `script.js`** — Master stylesheet and frontend UI interactivity.
-* **`ERD_CSC584_GROUP 2_ELITE.pdf`** — Entity Relationship Diagram (ERD) detailing the database schema (`STUDENT`, `MEDICAL_OFFICER`, `DOCTOR`, `APPOINTMENT`, `CONSULTATION`, `MEDICINE_CERTIFICATE`, `PRESCRIPTION`, `MEDICINE`).
-
-* # E-Klinik Siswa (SiswaMed) — Campus Health & Medical Leave Portal
-
-**E-Klinik Siswa** is a web-based campus clinic management system designed for **CSC584 (Enterprise Programming)**. It streamlines student healthcare appointments, live walk-in queue estimation, medical record tracking, digital Medical Certificate (MC) verification, and graduation medical record archiving.
+- **`login.html` / `register.html` & `auth.js`** — Portal authentication interface supporting role selection (`Student`, `Medical Officer / Clinic Admin`, `Senior Doctor`).
+- **`student-*.html`** — Student portal views for dashboard overview, appointment booking, patient history, medical leave, and graduation archive.
+- **`mo-*.html` & `admin-archive.html`** — Medical Officer & Clinic Admin station views for queue management, clinical diagnoses, MC issuance, and graduation record archiving.
+- **`doctor-*.html`** — Senior Doctor views for specialist consultations, complex history review, extended MC verification, and archive access.
+- **`style.css`** — Master stylesheet for layout, cards, tables, and responsive branding.
+- **`ERD_CSC584_GROUP 2_ELITE.pdf`** — Entity Relationship Diagram (ERD) detailing the database schema (`STUDENT`, `MEDICAL_OFFICER`, `DOCTOR`, `APPOINTMENT`, `CONSULTATION`, `MEDICINE_CERTIFICATE`, `PRESCRIPTION`, `MEDICINE`).
 
 ---
 
@@ -73,14 +68,14 @@ Users begin at the **Login Page** using their Student/Staff ID and select their 
 ---
 
 ### Phase 3: Medical Officer (MO) & Clinic Admin Station Flow
-**Flow:** `Overview` ➔ `Appointments Queue` ➔ `Diagnoses & Doctor Referrals` ➔ `Medical Leave`➔ `Graduation Archieve`
+**Flow:** `Overview` ➔ `Appointments Queue` ➔ `Diagnoses & Doctor Referrals` ➔ `Medical Leave` ➔ `Graduation Archive`
 
 | 1. MO Dashboard Overview | 2. Manage Appointments & Queue |
 | :---: | :---: |
 | ![MO Overview](SCREENSHOT%20OUTPUT/mo-overview.JPG) | ![MO Appointments](SCREENSHOT%20OUTPUT/mo-appointments.JPG) |
 
-| 3. Update Consultation & History | 4. Issue & Manage Medical Leave |  5. Clinic Admin Archive Management |
-| :---: | :---: |
+| 3. Update Consultation & History | 4. Issue & Manage Medical Leave | 5. Clinic Admin Archive Management |
+| :---: | :---: | :---: |
 | ![MO History](SCREENSHOT%20OUTPUT/mo-history.JPG) | ![MO MC](SCREENSHOT%20OUTPUT/mo-mc.JPG) | ![Admin Archive](SCREENSHOT%20OUTPUT/admin-archive.JPG) |
 
 ---
@@ -93,8 +88,5 @@ Users begin at the **Login Page** using their Student/Staff ID and select their 
 | ![Doctor Overview](SCREENSHOT%20OUTPUT/doctor-overview.JPG) | ![Doctor Appointments](SCREENSHOT%20OUTPUT/doctor-appointments.JPG) | ![Doctor History](SCREENSHOT%20OUTPUT/doctor-history.JPG) |
 
 | 4. Medical Leave Verification | 5. Doctor Archive View |
-| :---: | :---: | 
-| ![Doctor MC](SCREENSHOT%20OUTPUT/doctor-mc.JPG) | ![Doctor Archive](SCREENSHOT%20OUTPUT/doctor-archive.JPG)
-
-
-
+| :---: | :---: |
+| ![Doctor MC](SCREENSHOT%20OUTPUT/doctor-mc.JPG) | ![Doctor Archive](SCREENSHOT%20OUTPUT/doctor-archive.JPG) |
